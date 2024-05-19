@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class DialogueParejasTetrisScript : MonoBehaviour
+public class Dialogue2048Script : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText;
     public string[] lines;
@@ -25,47 +25,32 @@ public class DialogueParejasTetrisScript : MonoBehaviour
     IEnumerator WriteLine()
     {
 
-        // // Ajustar la velocidad de escritura para la segunda línea
-        // if(index == 1)
-        // {
-        //     textSpeed = 0.05f;
-        //     delay = 0.3f;
-        // }
-        // else
-        // {
-        //     if (index == 2 || index == 3)
-        //     {
-        //         textSpeed = 0.2f;
-        //         delay = 0.3f;
-        //     }
-        //     else
-        //     {
-        //         // Restaurar la velocidad de escritura original para otras líneas
-        //         textSpeed = 0.1f;
-        //         delay = 0.2f;
-        //     }
-        // }
-
         
-        if(index == 2)
+        if(index == 1)
         {
-            textSpeed = 0.1f;
-            delay = 0.2f;
+            textSpeed = 0.09f;
+            delay = 0.1f;
         }
         else
-        {
-            if(index == 1)
+        {   
+            if (index == 2 )
             {
-                textSpeed = 0.05f;
+                textSpeed = 0.06f;
+                delay = 0.3f;
+            }
+            else if (index == 3)
+            {
+                textSpeed = 0.08f;
+                delay = 0.3f;
             }
             else
             {
-                textSpeed = 0.06f;
-                delay = 0.1f; 
+                textSpeed = 0.05f;
+                delay = 0.2f;
             }
            
         }
-
+        
 
         foreach (char letter in lines[index].ToCharArray())
         {
