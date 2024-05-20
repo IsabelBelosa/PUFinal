@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class Final : MonoBehaviour
 {
@@ -10,10 +11,30 @@ public class Final : MonoBehaviour
     private float velocidadMovimiento = 8;
     public Text has_ganado;
     public Text ganador;
+    public Material jugador1;
+    public Material jugador2;
+    public Material jugador3;
+    public Material jugador4;
+    public GameObject jugador;
+    public VideoPlayer Creditos;
     // Start is called before the first frame update
     void Start()
     {
         Invoke("VuelaCohete",7.5f);
+        
+        if(TableroJuego.jugador_gana == 1){
+            jugador.GetComponent<Renderer>().material = jugador1;
+        }
+        if(TableroJuego.jugador_gana == 2){
+            jugador.GetComponent<Renderer>().material = jugador2;
+            ;
+        }
+        if(TableroJuego.jugador_gana == 3){
+            jugador.GetComponent<Renderer>().material = jugador3;
+        }
+        if(TableroJuego.jugador_gana == 4){
+            jugador.GetComponent<Renderer>().material = jugador4;
+        }
     }
 
     // Update is called once per frame
@@ -42,6 +63,13 @@ public class Final : MonoBehaviour
         }
         
         ganador.enabled = true;
+        Invoke("MostrarCreditos",5f);
+    }
+
+    void MostrarCreditos()
+    {
+        Creditos.enabled = true;
+        Creditos.Play();
     }
 
     IEnumerator VueloCohete(){
@@ -50,20 +78,20 @@ public class Final : MonoBehaviour
         camara.transform.position = new Vector3(56.3850136f,62.945385f,-29.4771271f);
         camara.transform.rotation = Quaternion.Euler(30.1846447f,326.198151f,359.99173f);
 
-         // Obtenemos la posición inicial y final del jugador
+         // Obtenemos la posici贸n inicial y final del jugador
         Vector3 startPos = transform.position;
         Vector3 endPos = new Vector3(0, 0, 3000);
         
-        // Mientras el jugador no haya llegado a la posición final
+        // Mientras el jugador no haya llegado a la posici贸n final
         while (transform.position != endPos)
         {
             // Calculamos el paso de movimiento
             float step = velocidadMovimiento * Time.deltaTime;
 
-            // Movemos al jugador hacia la posición final de manera suave
+            // Movemos al jugador hacia la posici贸n final de manera suave
             transform.position = Vector3.MoveTowards(transform.position, endPos, step);
 
-            // Esperamos al próximo frame
+            // Esperamos al pr贸ximo frame
             yield return null;
         }
     }

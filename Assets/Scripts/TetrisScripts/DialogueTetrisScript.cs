@@ -52,11 +52,11 @@ public class DialogueTetrisScript : MonoBehaviour
                 delay = 0.3f;
                 break;
             case 3:
-                textSpeed = 0.1f;
-                delay = 0.05f;
+                textSpeed = 0.07f;
+                delay = 0.2f;
                 break;
             case 4:
-                textSpeed = 0.1f;
+                textSpeed = 0.07f;
                 delay = 0.3f;
                 break;
         }

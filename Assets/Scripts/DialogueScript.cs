@@ -29,20 +29,28 @@ public class DialogueScript : MonoBehaviour
         if(index == 1)
         {
             textSpeed = 0.05f;
-            delay = 0.3f;
+            delay = 0.8f;
         }
         else
         {
-            if (index == 2 || index == 3)
+            if (index == 2)
             {
                 textSpeed = 0.2f;
-                delay = 0.3f;
+                delay = 1f;
             }
             else
             {
+                if (index == 3)
+                {
+                    textSpeed = 0.2f;
+                    delay = 0.3f;
+                }
+                else
+                {
+                    textSpeed = 0.1f;
+                    delay = 0.2f;
+                }
                 // Restaurar la velocidad de escritura original para otras líneas
-                textSpeed = 0.1f;
-                delay = 0.2f;
             }
         }
 

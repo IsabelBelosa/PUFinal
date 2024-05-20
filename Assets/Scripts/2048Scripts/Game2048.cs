@@ -1,5 +1,5 @@
 using System.Collections;
-using OpenCover.Framework.Model;
+//using OpenCover.Framework.Model;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,7 +14,7 @@ public class Game2048 : MonoBehaviour
     [SerializeField] private TextMeshProUGUI hiscoreText;
     private int score;
     public int Score => score;
-    public GameObject startButton, window,camera;
+    public GameObject startButton, window, camera;
 
     private void Awake()
     {

@@ -25,6 +25,7 @@ public class DialogueLaberintoScript : MonoBehaviour
     IEnumerator WriteLine()
     {
 
+        // Ajustar la velocidad de escritura para la segunda línea
         switch(index)
         {
             case 0:
@@ -33,7 +34,7 @@ public class DialogueLaberintoScript : MonoBehaviour
                 break;
             case 1:
                 textSpeed = 0.04f;
-                delay = 0.5f;
+                delay = 0.8f;
                 break;
             case 2:
                 textSpeed = 0.1f;
@@ -49,14 +50,13 @@ public class DialogueLaberintoScript : MonoBehaviour
                 break;
             case 5:
                 textSpeed = 0.06f;
-                delay = 0.3f;
+                delay = 0.7f;
                 break;
             case 6:
-                textSpeed = 0.08f;
+                textSpeed = 0.07f;
                 delay = 0.2f;
                 break;
         }
-
 
         foreach (char letter in lines[index].ToCharArray())
         {

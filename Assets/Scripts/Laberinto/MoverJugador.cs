@@ -19,7 +19,6 @@ public class MoverJugador : MonoBehaviour
 
     // Variables privadas
     private int aliens = 0;
-    private int turno = 0;
     private bool Iniciar = false;
 
 
@@ -27,24 +26,23 @@ public class MoverJugador : MonoBehaviour
     void Start()
     {
         cc = GetComponent<CharacterController>();
-        if(turno == 0)
+        if(TableroJuego.jugador_gana == 1)
         {
             material.material = azul;
         }
-        else if (TableroJuego.turno == 1)
+        else if (TableroJuego.jugador_gana == 2)
         {
             material.material = rosa;
         }
-        else if (TableroJuego.turno == 2)
+        else if (TableroJuego.jugador_gana == 3)
         {
             material.material = verde;
         }
-        else if (TableroJuego.turno == 3)
+        else if (TableroJuego.jugador_gana == 4)
         {
             material.material = rojo;
         }
     }
-
     public void IniciarJuego()
     {
         Iniciar = true;
@@ -88,7 +86,7 @@ public class MoverJugador : MonoBehaviour
         if(other.gameObject.tag =="Alien")
         {
             aliens++;
-            ContadorAliens.text = "Aliens = " + aliens + "/2";
+            ContadorAliens.text = "Aliens " + aliens + "/2";
             Destroy(other.gameObject);
         }
         if(aliens == 2 && other.gameObject.tag == "Cohete")

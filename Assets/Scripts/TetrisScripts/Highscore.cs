@@ -53,7 +53,7 @@ public class Highscore : MonoBehaviour {
 	}
 
     public void Update(){
-        if(points > 200)
+        if(points >= 200)
         {
             ClearCubes(); // Llama a la función para limpiar los cubos
             TableroJuego.juegoTerminado = true;

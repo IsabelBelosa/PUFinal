@@ -616,7 +616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 217, y: -121}
+  m_AnchoredPosition: {x: 217, y: -78}
   m_SizeDelta: {x: 236.05215, y: 60.539276}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &342358834
@@ -1115,7 +1115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.39215687, g: 0.42352942, b: 0.85882354, a: 0.8}
+  m_Color: {r: 0.5647059, g: 0.44705883, b: 0.65882355, a: 0.8}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1157,8 +1157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -147.33809}
-  m_SizeDelta: {x: 0, y: -294.6762}
+  m_AnchoredPosition: {x: 0, y: -191.23965}
+  m_SizeDelta: {x: 0, y: -382.4792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &535920285
 MonoBehaviour:
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   - SUPERA LOS 200 PUNTOS PARA ESTAR MAS CERCA DE RECUPERAR TU NAVE
   - SI NO LO CONSIGUES, PEOR PARA TI JAJAJA
   - PARA ELLO, MUEVE LA DIRECCION DE LOS BLOQUES CON WASD
-  - "y cambia su posici\xF3n con la R."
+  - y cambia su posicion con la R.
   textSpeed: 0.1
   delay: 0.2
   panel: {fileID: 535920280}
@@ -2017,7 +2017,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 222, y: -181}
+  m_AnchoredPosition: {x: 222, y: -137}
   m_SizeDelta: {x: 236.05215, y: 60.539276}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1000756693
@@ -2568,7 +2568,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406844137}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 38c9aa17db38db041984b6c21d805b1f, type: 3}
@@ -2735,8 +2735,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: caf78d234d808604c8f2e7c9ee9fd59e, type: 2}
-  m_sharedMaterial: {fileID: 4121897737995681032, guid: caf78d234d808604c8f2e7c9ee9fd59e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5b459001d3f445b4f8bed39a6b534168, type: 2}
+  m_sharedMaterial: {fileID: 4121897737995681032, guid: 5b459001d3f445b4f8bed39a6b534168, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2760,8 +2760,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 67
+  m_fontSizeBase: 67
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2796,7 +2796,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 2.9730225, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2826,8 +2826,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.4825, y: -4}
-  m_SizeDelta: {x: 856.701, y: 69.5108}
+  m_AnchoredPosition: {x: -0.0012474, y: -0.1352}
+  m_SizeDelta: {x: 964.4, y: 97.7835}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1526602046
 PrefabInstance:

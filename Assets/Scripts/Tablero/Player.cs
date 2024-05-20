@@ -190,7 +190,7 @@ public class Player : MonoBehaviour
 
     void TurnoJugador(){
         // Añadir opciones que hacer en el turno
-        if(casilla == 3){
+        if(casilla == 3 || casilla == 8 ){
             puntuacion++;
             animator.SetTrigger("victory");
             Invoke("FinTurno", 1.0f);
@@ -205,7 +205,7 @@ public class Player : MonoBehaviour
         if(casilla == 1 || casilla == 6 || casilla == 9){
             tablero.ActivarMinijuego();
         }
-        if (casilla == 2 || casilla == 5 || casilla == 8 || casilla == 0){
+        if (casilla == 2 || casilla == 5 || casilla == 0){
             Invoke("FinTurno", 1.0f);
         }
     }
@@ -215,7 +215,7 @@ public class Player : MonoBehaviour
             animator.SetTrigger("defeat");
         }
         if (victoria == true){
-            puntuacion++;
+            puntuacion+=2;
             victoria=false;
             animator.SetTrigger("victory");
         }

@@ -14,6 +14,7 @@ public class TableroJuego : MonoBehaviour
     static public int turno = 0;
     private int numJugadores = 4;
     static public Text puntos;
+    public Text turnos;
     public Text numJugador;
     private string minijuego;
     static public bool juegoTerminado = false; // Variable para indicar si el juego ha terminado
@@ -29,19 +30,7 @@ public class TableroJuego : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(turno_juego > 10){
-            int gana = Math.Max(jugador1.puntuacion, Math.Max(jugador2.puntuacion, Math.Max(jugador3.puntuacion, jugador4.puntuacion)));
-            if (gana == jugador1.puntuacion){
-                jugador_gana = 1;
-            }if (gana == jugador2.puntuacion){
-                jugador_gana = 2;
-            }if (gana == jugador3.puntuacion){
-                jugador_gana = 3;
-            }if (gana == jugador4.puntuacion){
-                jugador_gana = 4;
-            }
-            SceneManager.LoadScene("AnunciarGanador");
-        }
+
     }
 
     public void IniciarJuego(){
@@ -50,6 +39,8 @@ public class TableroJuego : MonoBehaviour
         puntos.enabled = true;
         numJugador.enabled = true;
         turno_juego = 1;
+        turnos.text = "Turno: " + turno_juego + "/10";
+        turnos.enabled = true;
         jugador1.ActivarTurno();
     }
 
@@ -60,6 +51,20 @@ public class TableroJuego : MonoBehaviour
             numJugador.text = "Jugador " + (turno+1);
             numJugador.color = Color.blue;
             turno_juego++;
+            if(turno_juego > 10){
+                    int gana = Math.Max(jugador1.puntuacion, Math.Max(jugador2.puntuacion, Math.Max(jugador3.puntuacion, jugador4.puntuacion)));
+                if (gana == jugador1.puntuacion){
+                    jugador_gana = 1;
+                }if (gana == jugador2.puntuacion){
+                    jugador_gana = 2;
+                }if (gana == jugador3.puntuacion){
+                    jugador_gana = 3;
+                }if (gana == jugador4.puntuacion){
+                    jugador_gana = 4;
+                }
+                SceneManager.LoadScene("AnuncioJugador");
+            }
+            turnos.text = "Turno: " + turno_juego + "/10";
             jugador1.ActivarTurno();
         }
         if (turno == 1){
@@ -81,7 +86,7 @@ public class TableroJuego : MonoBehaviour
 
     public void ActivarMinijuego(){
 
-        int juego = UnityEngine.Random.Range(4, 5); //cambiar el rango cuando esten los minijuegos
+        int juego = UnityEngine.Random.Range(1, 6); //cambiar el rango cuando esten los minijuegos
 
         switch(juego){
             case 1:
@@ -97,14 +102,19 @@ public class TableroJuego : MonoBehaviour
                 minijuego = "2048";
                 SceneManager.LoadSceneAsync(minijuego, LoadSceneMode.Additive);
                 break;
+            
             case 4:
+
+                minijuego = "ZigZag";
+
+                SceneManager.LoadSceneAsync(minijuego, LoadSceneMode.Additive);
+                break;
+
+            case 5:
                 minijuego = "Puzzle";
                 SceneManager.LoadSceneAsync(minijuego, LoadSceneMode.Additive);
                 break;
-            case 5:
-                minijuego = "ZigZagNuevo";
-                SceneManager.LoadSceneAsync(minijuego, LoadSceneMode.Additive);
-                break;
+
         }   
     }
 
